@@ -1,0 +1,310 @@
+/* Main Layout & Container */
+.dashboard-container {
+  background-color: #f8f9fd;
+  border-radius: 24px;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 240px;
+  background-color: #ffffff;
+  border-right: 1px solid #f0f0f0;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  margin: 4px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #f5f7ff;
+}
+
+.menu-item.active {
+  background-color: #4764ff;
+  color: white;
+}
+
+/* Header & Navigation */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Stats Card */
+.stats-card {
+  background-color: #f5f7ff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.efficiency-card {
+  background-color: #ede9fe;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.efficiency-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #4338ca;
+}
+
+/* Team Members */
+.team-members {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.member-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.add-member {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Performance Chart */
+.performance-chart {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.chart-tabs {
+  display: flex;
+  gap: 16px;
+}
+
+.chart-tab {
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.chart-tab.active {
+  background-color: #4764ff;
+  color: white;
+}
+
+/* Departments Section */
+.departments {
+  margin-top: 24px;
+}
+
+.department-card {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.department-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+/* Department Colors */
+.dept-design { background-color: #e0f2fe; }
+.dept-sales { background-color: #fef9c3; }
+.dept-seo { background-color: #f3e8ff; }
+
+/* Need Review Section */
+.need-review {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+/* Buttons */
+.btn-upgrade {
+  background-color: #4764ff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-upgrade:hover {
+  background-color: #3651db;
+}
+
+.btn-manage {
+  background-color: #f8fafc;
+  color: #64748b;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+}
+
+/* Utilities */
+.badge {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.increase {
+  color: #059669;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-container {
+      margin: 0 16px;
+  }
+  
+  .sidebar {
+      width: 64px;
+      padding: 16px 8px;
+  }
+  
+  .menu-text {
+      display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .departments-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .departments-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+    #about .row {
+        display: flex;
+        justify-content: center;
+        text-align: center; /* Rata tengah secara horizontal */
+    }
+    #about h3, #about ul {
+        margin: auto; /* Tambahkan margin otomatis */
+    }
